@@ -1,5 +1,5 @@
+import TextEditor from "~/components/Editor/textEditor/TextEditor";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +9,10 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div>
+      <h1 className="text-3xl">Welcome to React Router!</h1>
+      <TextEditor />
+    </div>
+  );
 }
